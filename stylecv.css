@@ -1,0 +1,63 @@
+* {margin: 0;
+padding: 0;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald','Cabin Sketch','Verdana';
+    background-color: black;
+}
+
+#telecharger {
+display: flex;
+justify-content: center; 
+margin-bottom: 15px;
+margin-top: 45px;
+margin-left: 40%;
+margin-right: 40%;
+padding:3px;
+color:rgb(202, 198, 198);
+text-decoration: none;
+font-size: 16px;
+border-width: 2px;
+border-style: solid;
+border-color: rgb(51, 50, 50);
+background-color:rgb(95, 95, 95);
+text-align: center;
+}
+
+#fondecran {
+   
+   /* Fixe l'image en haut à gauche de la page */
+  /*position: fixed; 
+  top: 0; 
+  left: 0;*/ 
+  display: block;
+   margin-left: auto;
+   margin-right: auto; 
+   width: 50%;
+  /* Préserve le ratio de l'image */
+  min-width: 60%;
+  min-height: 60%;
+ }
+@media (min-width: 0px) and (max-width: 700px) {
+
+    #main {
+        width: 350px;
+     }
+ 
+     #image {
+        width: 10%;
+     }
+     #image2 {
+        width: 60%;
+     }    
+     #image-div {
+        width: 10%;
+     }  
+     body {
+        width: 350px;
+     }  
+     h1 {margin-left: 5%;;
+         font-size: 13px;}
+}

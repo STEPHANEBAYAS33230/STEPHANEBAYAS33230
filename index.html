@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>portefolio personnel</title>
+    <link rel="stylesheet" href="stylexxxx.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin Sketch" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Obitron" rel="stylesheet" type="text/css">
+    <link href="css/all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aa652281aa.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body >
+    <header>
+        <nav id="nav-bar">
+            <ul class="nav-list">
+                <h1 >Stéphane Portfolio</h1>
+                <li><a href="#debut" class="lumineux">-Home-</a></li>
+                <li><a href="#project-section" class="lumineux">-Projects-</a></li>
+                <li><a href="#footering" class="lumineux">-Contact-</a></li>
+                <li><a href="cvhtml.html" target="_bank" class="lumineux">-CV-</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="debut" >
+        <section id="welcome-section">
+            <h1 id="titrewelcome"><span id="newh1">HELLO, WELCOME TO MY PORTFOLIO !</span></h1>
+            <h1 style="font-size: 65px;"><i class="fab fa-js turn2"></i><i class="fas fa-code turn2"></i><i class="fab fa-css3 turn2"></i></h1>
+                <h4 onclick="musicambiance()" class="text" type="button"> <i class="fas fa-play-circle turn" ></i>PLAY MUSIC<i class="fas fa-play-circle turn"></i></h4>
+            <figcaption>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" >
+                    <img class="fonducolor" type="button" id="roundedImage" onmouseover="defiltext()" src="moi.jpg">
+                </div>
+            </figcaption>
+            <figcaption>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"><button class="button fonducolor" type="button" name="button" onclick="ambiance()">SEASONS THEME </button><img class="roundedImage2" src="pcc.jpg"></div>
+            </figcaption>
+
+        </section>
+
+
+
+        <section id="project-section">
+            <h1 class="project-title">MY PROJECTS</h1>
+            <p><br><br><br>-<a href="DESTINATIONPRODUIT.html" target="_bank">my projet 1 été 2020</a><i class="fas fa-tractor" style="font-size: 25px;"></i></p>
+            <p>--<a href="FORMULAIREENQUETE.html" target="_bank">my projet 2 07/2020</a><i class="fas fa-plane"></i></p>
+            <p>---<a href="PAGETECHvers2.html" target="_blank">my projet 3 07/2020</a><i class="fas fa-keyboard"></i></p>
+            <p>----<a href="tributepage.html" target="_blank">my projet 4 08/2020</a><i class="fas fa-film"></i></p>
+            <p>-----<a href="mediaplayer/mediaplayerSM.html" target="_blank">responsive page <i class="fab fa-bootstrap"></i> </a><i class="fas fa-music"></i></p>
+            <p>------<a href="moncine/moncine.html" target="_blank">my projet 6 11/2020</a><i class="fas fa-music"></i></p>
+            <p>------<a href="monrugby/monrugby.html" target="_blank">my projet 7 11/2020</a><i class="fas fa-music"></i></p>
+
+        </section>
+
+        <footer id="footering">
+            <div id="profile-link">
+                <a href="https://github.com/STEPHANEBAYAS33230" target="_blank" id="mygithub">my github <i class="fab fa-github-square turn" style="color:rgb(2, 59, 17);"></i></a>
+                <a href="https://www.linkedin.com/in/stephane-mounier-a0184b1a6" id="mylinkedin" target="_bank">my Linked In <i class="fab fa-linkedin turn" style="color:darkblue;"></i></a>
+                <a href="mailto: lila74500@hotmail.fr" id="mymail" target="_blank">my mail <i class="fas fa-envelope-square turn"></i></a>
+            </div>
+        </footer>
+        <sectionicone>
+            <div id="iconfleche">
+                <a href="#submit" ><i class="fas fa-angle-double-down colorfleche text"></i></a>
+            </div>
+        </sectionicone>
+        <form name="monFormulaire">
+            <div id="contact1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">CONTACT ME</div><br>
+
+            <fliedset id="formulaire" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+
+                <div class="preform">
+                    <label for="name1">NOM:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="name1" required size="20" placeholder="votre nom">
+                </div>
+                <br>
+                <div class="preform">
+                    <label for="prename">PRENOM:</label>
+                    <br><input type="text" class="preform1" id="prename-label" name="prename" required size="20" placeholder="votre prénom">
+                </div>
+                <div class="preform">
+                    <label for="telephone">TELEPHONE:</label>
+                    <br><input type="tel" class="preform1" id="tel-label" name="telephone" required size="20" placeholder="votre téléphone" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+                </div>
+                <div class="preform">
+                    <br><label for="email">VOTRE EMAIL:</label>
+                    <br><input type="email" class="preform1" id="email-label" name="email" required placeholder="votre email@" size="30"><br><br>
+                </div>
+                <div class="preform">
+                    <label for="story"><br><br>Votre message:</label><br>
+                    <textarea id="textarea" class="preform1" name="story" rows="5" cols="85" maxlength="250" placeholder=" " ></textarea>
+                </div>
+                <br><input class="preform3" id="submit" type="submit" name="submit" value="ENVOYER" onclick="verifformulaire()">
+            </fliedset>
+        </form>
+    </main>
+    <script>
+        var emailx;
+        var namex;
+        var prenamex;
+        var telephonex;
+        var storyx;
+           
+        levee();
+        AOS.init();
+       
+        var i=1;
+        var j=1;
+        var entree=0;
+        var entreecolor=0;
+        var mybruitphoto=document.createElement("audio");
+        var mymusic=document.createElement("audio");
+        mybruitphoto.src="bruitphoto.mp3";
+        mymusic.src="musicc.mp3";
+        setInterval("levee()",3000);
+       
+    
+//*******************************************************************
+    function verifformulaire(){mess="";
+        namex=document.getElementById("name-label").value;
+        prenamex=document.getElementById("prename-label").value;
+        telephonex=document.getElementById("tel-label").value;
+        emailx=document.getElementById("email-label").value;
+        storyx=document.getElementById("textarea").value;
+    var mess=namex+"--"+prenamex+"--tel:"+telephonex+"--email:"+emailx+"--message:"+storyx;
+    alert(mess);
+   
+    }
+    
+//*******************************************************************
+        function ambiance() {
+            mybruitphoto.play();
+            if (i==0){
+            document.getElementById("welcome-section").style.backgroundImage="url('plaine.jpg')"; 
+            i=1; 
+            } else if (i==1){
+            document.getElementById("welcome-section").style.backgroundImage="url('autom.jpg')"; 
+            i=2;}
+            else if (i==2){
+            document.getElementById("welcome-section").style.backgroundImage="url('winter.jpg')"; 
+            i=3;}
+            else if (i==3){
+            document.getElementById("welcome-section").style.backgroundImage="url('spring.jpg')"; 
+            i=0;}
+            mybruitphoto.stop();
+            }
+        function defiltext() {if (entree==0){entree=1; setInterval("voix()",3000);}}
+        function voix() {
+                 if (j==0){document.getElementById("newh1").textContent ="HELLO, WELCOME TO MY PORTFOLIO !"; j++; }
+            else if (j==1){document.getElementById("newh1").textContent ="Je suis Developpeur Web/Web Mobile"; j++; }
+            else if (j==6){document.getElementById("newh1").textContent ="Je recherche un stage en entreprise"; j=7; }
+            else if (j==7){document.getElementById("newh1").textContent ="date du stage:19/04/2021 au 11/06/2021"; j=0; }
+            else if (j==3){document.getElementById("newh1").textContent ="Mes différents langages et frameworks"; j++; }
+            else if (j==4){document.getElementById("newh1").textContent ="HTML-JS-JAVA/JAVA JEE-SQL-PL/SQL"; j++; }
+            else if (j==5){document.getElementById("newh1").textContent ="Symphony-PHP et BOOTSTRAP"; j++; }
+            else if (j==2){document.getElementById("newh1").textContent ="Je suis en formation (ENI Ecole Informatique)"; j++;}
+        }
+        //*****************************************
+         function musicambiance(){  mymusic.play(); mymusic.stop(); }
+        //******************************************
+         
+         function levee() { 
+             if (entreecolor==0){
+                   for(f=255;f>0;f--){
+                    document.header.style.backgroundcolor="rgb(f+','+f+','+f)"; 
+                   
+                   } 
+                   entreecolor=1;
+                   
+             }
+         }
+    </script>
+
+</body>
+
+</html>

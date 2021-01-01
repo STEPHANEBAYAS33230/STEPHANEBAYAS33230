@@ -1,0 +1,114 @@
+body {
+    background-color: rgb(94, 64, 8);
+
+}
+
+.source {
+    width: 100%;
+    background-color: rgb(185, 134, 40);
+}
+#addlist{
+    border-width: 2px;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color:   rgb(151, 118, 56);
+    margin: 15px;
+    border-radius: 50% ;
+    border-color:rgb(197, 190, 178) ;
+}
+.ecar {
+    text-align: center;
+    margin-left: 35px;
+    margin-top: 35px;
+    margin-bottom: 4px;
+}
+
+.progress {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.lecteur {
+    text-align: center;
+    background-color: rgb(243, 161, 9);
+}
+
+.progress1 {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.barresearch {
+    width: 100%;
+    background-color: rgb(196, 141, 40);
+}
+
+.margesearch {
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+.musicVideoPodcast {
+    text-align: center;
+    /** margin-top: 15px;
+    margin-bottom: 15px;**/
+
+
+}
+
+.musicVideoPodcast-box {
+    background-color: rgb(172, 120, 23);
+
+}
+
+.titreArtiste {
+
+    width: 100%;
+    background-color: rgb(151, 118, 56);
+
+
+}
+
+.musicVideoPodcast {
+
+    margin: 10px;
+
+
+}
+
+.cadrep {
+    margin: 10px;
+
+}
+
+#titreplaylist {
+    text-align: center;
+    border: 1px;
+    background-color: rgb(196, 141, 40);
+    border-radius: 3px;
+}
+
+.playliste {
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-color: rgb(243, 161, 9);
+    text-align: center;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: rgb(196, 141, 40);
+    border-width: 1px;
+}
+.playliste2 {
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-color: rgb(243, 161, 9);
+    text-align: center;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: rgba(76, 97, 0, 0.699);
+    border-width: 1px;
+}

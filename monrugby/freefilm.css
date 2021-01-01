@@ -1,0 +1,93 @@
+body {
+    width:100%; 
+    margin:0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: url("bobinefilm.jpg");
+    background-repeat: repeat-y;
+    scroll-behavior: smooth;
+}
+
+.parttitre{
+    background-color: black;
+}
+.partsoustitre {
+    background-color: grey;
+     border-bottom: 3px;
+    border-style: double;
+    border-color: rgb(228, 8, 147);
+}
+.margercaroussel {
+    margin-top: 80px;
+   
+    margin-bottom: 80px;
+    
+}
+.cadrecaroussel{
+   
+     border-top: 10px;
+    border-bottom: 10px;
+    border-left: 35px;
+    border-right: 35px;
+    border-style: solid;
+    border-color: gray;
+    box-shadow: black 10px 15px 18px;
+    border-radius: 15px;
+    
+}
+
+.titrefilm{
+    font-size: 60px;
+    font-family: monoton;
+    color:antiquewhite;
+    text-align: center;
+    text-shadow: rgb(0,155,36) 10px 5px 8px;
+}
+#soustitre{
+    font-size: 40px;
+    font-family: Audiowide;
+    color:antiquewhite;
+    text-align: center;
+   
+    text-align: center;
+}
+#pcopyright{
+    font-family: Audiowide;
+    text-align: center;
+}
+.cadrefilm{
+    margin-top: 60px;
+    height: 400px;
+    
+}
+.bordurecran{margin-top: 30px;
+     border: 10px;
+    border-style: solid;
+    border-color: rgb(22, 22, 22);
+    box-shadow: rgb(95, 95, 93) 10px 15px 18px;
+}
+.pfilm{margin-top: 12px;
+    font-family: Audiowide;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(90, 12, 10);
+    background-color: blanchedalmond;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.partfilm{
+    margin-top: 135px;
+}
+#fleche {font-size: 100px;
+    background-color: grey;
+    border: 1px;
+    padding: 10px;
+    color:withe;
+border-radius:5px;}
+a:hover{
+    color: antiquewhite;
+}
+a{
+    color: antiquewhite;
+}

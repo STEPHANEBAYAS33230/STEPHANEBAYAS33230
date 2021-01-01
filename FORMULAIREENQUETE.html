@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>formulaire d'enquête séjour sur ILEparadis</title>
+  <link rel="stylesheet" href="stylefe.css">
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin Sketch" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+</head>
+<body>
+ <main>
+<figure id="image-div">
+         <img id="image" src="https://images.unsplash.com/photo-1581364101929-bd09d423e738?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+  <header id="header">
+      <h1><b>Formulaire d'enquête sur votre séjour<br>sur l'île du Paradis...</b></h1>
+      <p style="font-size: 15px">Merci d'avoir pris le temps de nous aider à améliorer nos séjours.</p>
+  </header>
+ 
+  
+  <form id="survey-form">
+    <!--<fieldset id="fieldset-c">-->
+      <legend>QUESTIONNAIRE</legend>
+      <fieldset id="fieldset-c">
+      <label for="name1">NOM:</label>
+    <br><input type="text" id="name-label" name="name1" placeholder="nom">
+    <br>
+    <label for="prename">PRENOM:</label>
+    <br><input type="text" id="prename-label" name="prename" placeholder="prénom">
+    <br><label for="duree">Combien de jours a duré votre séjour ?</label>
+    <br><input type="number" id="number-label" name="duree" min="0" max="150" required placeholder="durée du séjour">
+    <br><label for="email">VOTRE EMAIL:</label>
+    <br><input type="email" id="email-label" name="email"  required placeholder="----------------email@-------------.fr" size="30" required><br><br>
+    <br><label for="notation">Comment avez-trouvé l'accueil et la prestation du personnel de l'hôtel ?</label>
+    <br><select id="dropdown" name="notation">
+      <option value="excellent">excellent</option>
+      <option value="bien">bien</option>
+      <option value="assez bien">assez bien</option>
+      <option value="passable">passable</option>
+    </select>
+    <br><br>
+    <p>Quelle note donnez-vous pour la qualité et service du restaurant de l'hôtel ?</p><br>
+    <input id="name" type="radio" name="name" value="value">
+    <label for="tres bonne">très bonne</label>
+    <input id="name" type="radio" name="name" value="value">
+    <label for="bonne">bonne</label>
+    <input id="name" type="radio" name="name" value="value">
+    <label for="assezbonne">assez bonne</label>
+    <input id="name" type="radio" name="name" value="value">
+    <label for="passable">passable</label>
+    <input id="name" type="radio" name="name" value="value">
+    <label for="mediocre">médiocre</label>
+    
+  <br><br><p>Quelles visites avez-vous le plus aimé ?<br><br></p>
+   <input type="checkbox" id="activites" name="plongee"/>
+   <label for="plongee">Plongee</label>
+ 
+  <input type="checkbox" id="activites" name="randonnee"/>
+  <label for="randonnee">Randonnée</label>
+
+
+  <input type="checkbox" id="activites" name="scooter"/>
+  <label for="scooter">JetSki</label>
+
+
+  <input type="checkbox" id="activites" name="ilesvoisines"/>
+  <label for="randonnee">Visites des îles</label><br>
+
+  <label for="story"><br><br>Vos suggestions et commentaires sur le séjour:</label><br>
+    <textarea id="textarea" name="story"
+          rows="5" cols="85" maxlength="250" placeholder="...">
+    </textarea> 
+    <br><input id="submit"type="submit" name="submit" value="soumettre">
+    </fieldset>
+     </form>
+  </fieldset>
+  <footer id="copyright-info">
+    <p><br><br><br>Copyright S. Mounier 2020</p>
+  </footer>
+  </figure>
+ </main> 
+</body>
+</html>

@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 1586px;
+    height:auto;
+}
+main { 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#header {position: absolute;
+ left: 0;
+    top: 30px;
+        width: 100%;
+        height: auto;
+        display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Cabin Sketch;
+    font-size: 21px;
+        
+}
+#title {color: black;
+    }
+
+#img-div {margin: 0;
+    padding: 0;
+    position: relative;
+    width: 1586px;
+    height:1800px;
+
+   }
+#image {margin: 0;
+    padding: 0;
+    width: 1586px;
+    height:2500px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    
+}
+#copyright-info {
+    position:absolute;
+    top:2300px;
+    left: 0;
+    text-align:center;
+    width: 60%;
+    height:30px; 
+    
+    font-size:20px;
+   color: black;
+   position:absolute;
+   top:1650px;
+   left: 285px;
+   text-align:center;
+   width: 60%;
+   height:30px; 
+   font-size:20px;
+  color: black;
+   }
+
+#survey-form {display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Oswald;
+   position: absolute;
+    top: 300px;
+    left: 20%;
+    align-items: center;
+    text-align:center;
+    width: 60%;
+    font-size:25px;
+    color: black;
+   /* background-color: rgba(141, 118, 163, 0.5);*/
+}
+#fieldset-c {
+   
+    background-color: rgba(141, 118, 163, 0.5);
+    text-align: center;
+    color: black;
+}
+ legend {
+    background-color: rgba(161, 122, 197, 0.5);
+    color:black;
+    padding: 2px 6px;
+    text-align: center;
+    border-style: none;
+    font-family: Oswald;
+}
+#name-label {font-size: 23px;
+    background-color: rgba(184, 158, 207, 0.6);
+}
+#prename-label {font-size: 23px;
+    background-color: rgba(184, 158, 207, 0.6);
+}
+#number-label {font-size: 23px;
+    background-color: rgba(184, 158, 207, 0.6);}
+
+#email-label {font-size: 23px;
+        background-color: rgba(184, 158, 207, 0.6);
+    }
+#dropdown {font-size: 23px;
+        background-color: rgba(184, 158, 207, 0.6);
+    }
+#name {font-size: 23px;
+        background-color: rgba(184, 158, 207, 0.6);
+        
+        text-align: center;
+        
+        }
+#activites {font-size: 23px;
+    background-color: rgba(184, 158, 207, 0.6);
+   
+    text-align: center;
+    
+    
+} 
+#textarea {
+    font-size: 23px;
+            background-color: rgba(184, 158, 207, 0.8);
+           width: 500px;
+        }
+#submit {font-size: 23px;
+            background-color: rgba(184, 158, 207, 0.8);
+}
+
+
+form {display: flex;
+    flex-direction: column;
+    align-items: center;}
+ @media (min-width: 100px) and (max-width: 500px) {
+
+        #main {
+            width: 500px;
+         }
+     
+         #image {
+            width: 500px;
+         }  
+         #image-div {
+            width: 500px;
+         }  
+         body {
+            width: 500px;
+         }  
+    }
