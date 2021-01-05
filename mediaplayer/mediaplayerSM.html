@@ -86,7 +86,7 @@
                 <div id="titre7" class="playliste" onclick="vider(7)">***EMPTY*******</div>
                 <div id="titre8" class="playliste" onclick="vider(8)">***EMPTY*******</div>
                 <div id="titre9" class="playliste" onclick="vider(9)">***EMPTY*******</div>
-                <div id="play2" class="playliste2" onclick="demarreplaylist()">play<i class="far fa-play-circle"></i></div>
+                <div id="play2" class="playliste2" onclick="demarreplaylist()">play list<i class="far fa-play-circle"></i></div>
                 <!-- <div id="next2" class="playliste2">next<i class="fas fa-fast-forward"></i></div>
                 <div id="prenext2" class="playliste2"><i class="fas fa-fast-backward"></i>before</div>-->
 
@@ -95,29 +95,7 @@
             <!--PARTIE MORCEAU AVEC NOM ET TITRE DE L ARTISTE-->
             <div class="col-lg-10 justify-content-center titreArtiste">
                 <div class="row" id="addition">
-                 <!--   <div class="cadrep" onclick="scr1()">
-                        <img class="fit-picture" src="media/175/1.jpg" alt="photo pochette cd taille grand">
-                        <div class="titreArtiste">BEAUTIFUL TRAUMA</div>
-                        <div class="NomArtiste">PINK</div>
-                    </div>
-                    <div class="cadrep" onclick="scr2()">
-                        <img class="fit-picture" src="media/175/2.jpg" alt="photo pochette cd taille grand">
-                        <div class="titreArtiste">CHUNKY</div>
-                        <div class="NomArtiste">BRUNO MARS</div>
-                    </div>
-                    <div class="cadrep" onclick="scr3()">
-                        <img class="fit-picture" src="media/175/3.jpg" alt="photo pochette cd taille grand">
-                        <div class="titreArtiste">BOB MARLEY</div>
-                        <div class="NomArtiste">DADJU</div>
-                    </div>
-                    <div class="cadrep" onclick="scr4()">
-                        <img class="fit-picture" src="media/175/4.jpg" alt="photo pochette cd taille grand">
-                        <div class="titreArtiste">LA MEME</div>
-                        <div class="NomArtiste">MAITRE GIMS</div>
-                    </div>-->
-                   
-                    
-                   
+                
 
                 </div>
             </div>
@@ -144,14 +122,15 @@
         var postiret;
 var tablo=['beautiful trauma-pink','chunky-bruno mars','bob marley-dadju','la même-maitre gims','AC DC - Greatest hits','Bob Marley & the Wailers -Concert','Tino Rossi - Petit Papa Noël','VITAA SLIMANE - Je te le donne ','Coldplay - A Sky Full Of Stars','Coldplay - Something Just Like This','VITAA & SLIMANE - Avant toi','VITAA & SLIMANE - Ça ira']//,'Dire Straits - Money For Nothing','Mariah Carey - Christmas Is You','Charles Aznavour - La Boheme','Pink Floyd - Hey You ']//,'teen s titant go-The Night Begins to Shine','u2-Sunday Bloody Sunday','Edith Piaf - La Vie En Rose','edith piaf-La foule','Julien Doré - Le lac','Laspalès&chevalier-Ma femme est penible','Licence IV - Viens boire un p tit','Suprême NTM - La fièvre','Christine and the Queens - Damn, dis-moi ','Michel delpech-Quand j étais chanteur','Ed Sheeran - Afterglow','Luciano Pavarotti - Ave Maria','Pavarotti&Brown - It s A Man s World','Alicia Keys - Fallin','Beyoncé- Shatta Wale','BTS- Savage Love Remix'];
 var chaineaddition;
-formation();
-        scradd(0);
 
-        sonplus();
-        affichagelisting();
-        reorganisationplaylist();
-        affichagelisting();
-        setInterval("courant()", 500);
+formation();
+scradd(0);
+affichagelisting();
+sonplus();
+
+reorganisationplaylist();
+affichagelisting();
+setInterval("courant()", 500);
         // func formation titre/chanteur
     //    <div class="cadrep" onclick="scr4()">
     //                    <img class="fit-picture" src="media/175/4.jpg" alt="photo pochette cd taille grand">
@@ -167,7 +146,6 @@ chaineaddition=""; var chainetraitee;
         chainetraitee=tablo[r].slice(postiret+1).toUpperCase();
         chaineaddition=chaineaddition+'<div class="titreArtiste">'+(tablo[r].substring(0,postiret).toUpperCase())+'</div>';
         chaineaddition=chaineaddition+'<div class="NomArtiste">'+(chainetraitee)+'</div>'+'</div>';
-       // alert(chaineaddition);
         }
        
         document.getElementById("addition").innerHTML=chaineaddition;
@@ -187,8 +165,8 @@ chaineaddition=""; var chainetraitee;
 
         function addplay() {
             for (i = 0; i < 10; i++) {
-                //source="";
-                if (localStorage.getItem("playlisting" + i.toString()) == undefined || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY*******" || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY***") {
+                
+                if (localStorage.getItem("playlisting" + i.toString())=== null || localStorage.getItem("playlisting" + i.toString())===undefined || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY*******" || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY***") {
                     localStorage.setItem("playlisting" + i.toString(), source);
 
                     affichagelisting();
@@ -198,14 +176,15 @@ chaineaddition=""; var chainetraitee;
                     // alert(localStorage.getItem("playlisting" +(0).toString())); 
                     break;
                 }
+                
             }
 
             affichagelisting();
             //controle si playlist pleine
             playliststock = 0;
-            for (i = 0; i < 10; i++) {
-                if (localStorage.getItem("playlisting" + i.toString()) != "***EMPTY*******") {
-                    playliststock++;
+            for (w = 0; w < 10; w++) {
+                if ((localStorage.getItem("playlisting" + w.toString())) !=null && (localStorage.getItem("playlisting" + w.toString())) !=undefined && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY***") {
+                    playliststock++; 
                 }
             }
             if (playliststock > 9) {
@@ -216,22 +195,14 @@ chaineaddition=""; var chainetraitee;
         function demarreplaylist() {
             f = 0;
             entreeplaylist = 1;
-            //affichagelisting();
-            // reorganisationplaylist();
-            // affichagelisting();
-
+            affichagelisting();
+             reorganisationplaylist();
+            affichagelisting();
             playlist2();
-
-
-
-
-
         }
 
         function playlist2() {
-
-
-            if (localStorage.getItem("playlisting" + f.toString()) != null || localStorage.getItem("playlisting" + f.toString()) != "***EMPTY*******" && entreeplaylist == 1) {
+            if (localStorage.getItem("playlisting" + f.toString()) !== undefined || localStorage.getItem("playlisting" + f.toString()) !== null || localStorage.getItem("playlisting" + f.toString()) != "***EMPTY*******" && entreeplaylist == 1) {
 
                 mymusic.src = localStorage.getItem("playlisting" + f.toString());
                 source = "";
@@ -240,11 +211,10 @@ chaineaddition=""; var chainetraitee;
                 sonplus();
                 titrecchanteur();
                 lecture();
-
+                setInterval("courant()", 500);
 
             }
             f++;
-
         }
 
 
@@ -252,31 +222,27 @@ chaineaddition=""; var chainetraitee;
 
         function vider(x) {
             localStorage.setItem("playlisting" + x.toString(), "***EMPTY*******");
-
+            affichagelisting();
             reorganisationplaylist();
             affichagelisting();
-            return;
         }
 
         function affichagelisting() {
-
-            for (z = 0; z < 10; z++) {//alert(localStorage.getItem("playlisting" + z.toString()));
-                if (localStorage.getItem("playlisting" + z.toString()) != "null" || localStorage.getItem("playlisting" + z.toString()) != undefined || localStorage.getItem("playlisting" + z.toString()) != "***EMPTY*******" || localStorage.getItem("playlisting" + z.toString()) != "***EMPTY***") {
+            for (z = 0; z < 10; z++) {
+                if (localStorage.getItem("playlisting" + z.toString()) !==null && localStorage.getItem("playlisting" + z.toString()) !== undefined && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY***") {
                     document.getElementById("titre" + z.toString()).textContent = localStorage.getItem("playlisting" + z.toString()).substring(0, localStorage.getItem("playlisting" + z.toString()).length - 4).toUpperCase();
-
                 } else {
                     document.getElementById("titre" + z.toString()).textContent = "***EMPTY*******"
-                    localStorage.setItem("playlisting" + z.toString(), "***EMPTY*******");
+                    localStorage.setItem("playlisting" +(z.toString()), "***EMPTY*******");
                 }
             }
-
+        
         }
 
         function reorganisationplaylist() {
-            //alert("reorganisation");
             for (gh = 0; gh < 11; gh++) {
                 for (w = 0; w < 9; w++) {
-                    if (localStorage.getItem("playlisting" + w.toString()) == "***EMPTY*******" || localStorage.getItem("playlisting" + w.toString()) == "***EMPTY***" || localStorage.getItem("playlisting" + w.toString()) == undefined) {
+                    if (localStorage.getItem("playlisting" + w.toString())=== null || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY*******" || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY***" || localStorage.getItem("playlisting" + w.toString())=== undefined) {
 
                         localStorage.setItem("playlisting" + w.toString(), localStorage.getItem("playlisting" + (w + 1).toString()));
                         document.getElementById("titre" + w.toString()).textContent = localStorage.getItem("playlisting" + (w + 1).toString())
@@ -321,46 +287,12 @@ chaineaddition=""; var chainetraitee;
 
 
         }
-
-        function scr1() {
-            finaddlist();
-            mymusic.src = srce1;
-            source = "";
-            source = srce1;
-
-            titrecchanteur();
-        }
-
-        function scr2() {
-            finaddlist();
-
-            mymusic.src = srce2;
-            source = "";
-            source = srce2;
-            titrecchanteur();
-        }
-
-        function scr3() {
-            finaddlist();
-            mymusic.src = srce3;
-            source = "";
-            source = srce3;
-            titrecchanteur();
-        }
-
-        function scr4() {
-            finaddlist();
-            mymusic.src = srce4;
-            source = "";
-            source = srce4;
-            titrecchanteur();
-        }
-
         function lecture() {
             mymusic.play();
             duree = mymusic.duration;
             sortie = 1;
             document.getElementById("rangeAvancement").value = (Math.round(100 * (mymusic.currentTime) / duree)).toString();
+            setInterval("courant()", 500);
         }
 
         function courant() {
@@ -421,8 +353,7 @@ chaineaddition=""; var chainetraitee;
             temps = (parseInt(document.getElementById("rangeAvancement").value)) * duree / 100;
             if (temps - 5 > 0) {
                 mymusic.currentTime = temps - 5;
-                //  localStorage.setItem("playlisting" + "5", "***empty*******");
-                //   localStorage.setItem("playlisting" + "0", "***empty*******");
+               
             }
         }
 
