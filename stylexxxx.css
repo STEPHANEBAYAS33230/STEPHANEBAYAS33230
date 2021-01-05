@@ -15,7 +15,17 @@ dans les h1 p etc parce que si non tous les elements d'une section
 vont prendre les mêmes attributes.
 
 */
-
+#newh1 {width: 390px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+   /* background-color: black;
+    border-radius: 7px;
+    border: solid;
+    border-color: aliceblue;
+    border-width: 1px;*/
+}
 html,
 body {
     scroll-behavior: smooth;
@@ -58,7 +68,7 @@ header h1 {
     align-items: flex-end;
     border-bottom: rgb(161, 83, 83);
     /*width:201vh;*/
-    height: 80px;
+    height: 60px;
 }
 
 /* 
@@ -142,11 +152,16 @@ background-image: url("SEASONS.jpg");
 
 #titrewelcome {
     margin-top: 50px;
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
     font-family: 'Audiowide','Oswald', 'Verdana', sans-serif;
     text-shadow: 6px 6px 3px rgb(161, 43, 43);
-    color: rgb(0, 0, 0);
+    color: rgb(219, 243, 4);
+    width: 62%;
+    
+    background-image: url("tabloscr.png");
+    border-radius: 12px;
+    
 }
 
 .project-title {
