@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>portefolio personnel</title>
+    <title>Stéphane Portefolio</title>
     <link rel="stylesheet" href="stylexxxx.css">
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
     <header>
         <nav id="nav-bar">
             <ul class="nav-list">
-                <h1 >Stéphane Portfolio</h1>
+                <h1 >Stéphane Développeur Web</h1>
                 <li><a href="#debut" class="lumineux">-Home-</a></li>
                 <li><a href="#project-section" class="lumineux">-Projects-</a></li>
                 <li><a href="#footering" class="lumineux">-Contact-</a></li>
@@ -29,12 +29,13 @@
     </header>
     <main id="debut" >
         <section id="welcome-section">
-            <h1 id="titrewelcome"><span id="newh1">HELLO, WELCOME TO MY PORTFOLIO !</span></h1>
+            <h1 id="titrewelcome"><span id="newh1"></span></h1>
             <h1 style="font-size: 65px;"><i class="fab fa-js turn2"></i><i class="fas fa-code turn2"></i><i class="fab fa-css3 turn2"></i></h1>
             <h4 onclick="musicambiance()" class="text" onmouseover="style='letter-spacing:+1px;'" onmouseout="style='letter-spacing:0px;'"> <i class="fas fa-play-circle turn" ></i>PLAY MUSIC<i class="fas fa-play-circle turn"></i></h4>
             <figcaption>
-                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" >
-                    <img class="fonducolor" type="button" id="roundedImage" onmouseover="defiltext()" src="moi.jpg">
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="fonducolor" id="roundedImage" type="button"  onclick="defiltext()" style="background-color: rgb(0, 153, 255); text-align: center;">
+                    <img   src="moi.jpg" width="100%" height="85%">
+                  <legend  class="fonducolor" width="100%"height="15%">click me</legend>
                 </div>
             </figcaption>
             <figcaption>
@@ -52,9 +53,9 @@
             <p>---<a href="PAGETECHvers2.html" target="_blank">my projet 3 07/2020</a><i class="fas fa-keyboard"></i></p>
             <p>----<a href="tributepage.html" target="_blank">my projet 4 08/2020</a><i class="fas fa-film"></i></p>
             <p>-----<a href="mediaplayer/mediaplayerSM.html" target="_blank">mon lecteur music<i class="fab fa-bootstrap"></i> </a><i class="fas fa-music"></i></p>
-            <p>------<a href="moncine/moncine.html" target="_blank">my projet 6 11/2020</a><i class="fas fa-music"></i></p>
-            <p>------<a href="monrugby/monrugby.html" target="_blank">my projet 7 11/2020</a><i class="fas fa-music"></i></p>
-            <p>-------<a href="stationMETEO/meteo.html" target="_blank">Ma météo 20/12/2020</a><i class="fas fa-music"></i></p>
+            <p>------<a href="moncine/moncine.html" target="_blank">my projet 6 11/2020</a><i class="fas fa-tv"></i></p>
+            <p>------<a href="monrugby/monrugby.html" target="_blank">my projet 7 11/2020</a><i class="fas fa-tv"></i></p>
+            <p>-------<a href="meteo.html" target="_blank">api meteo 20/12/2020</a><i class="fas fa-cloud"></i></p>
 
         </section>
 
@@ -106,19 +107,27 @@
         var prenamex;
         var telephonex;
         var storyx;
-           
+        var chainette="HELLO, WELCOME TO MY PORTFOLIO !  Je suis Developpeur Web/Web Mobile.......Je suis en formation (ENI Ecole Informatique)......Je recherche un stage en entreprise date du stage:19/04/2021 au 11/06/2021.....mes différents langages et frameworks HTML-JS-JAVA/JAVA JEE-SQL-PL/SQL....Symphony-PHP et BOOTSTRAP.................................................";  
+         var chaine2="HELLO, WELCOME TO MY PORTFOLIO !";
+         document.getElementById("newh1").innerHTML =chaine2;
         levee();
         AOS.init();
-       
+       var chaine3;
+       var mwrt="_";
         var i=1;
-        var j=1;
+        var first=0;
+        var j=0;
+        var indice=0;
         var entree=0;
         var entreecolor=0;
+        var monclavier=document.createElement("audio");
         var mybruitphoto=document.createElement("audio");
         var mymusic=document.createElement("audio");
         mybruitphoto.src="bruitphoto.mp3";
         mymusic.src="musicc.mp3";
-        setInterval("levee()",3000);
+        monclavier.src="clavier.wav";
+        setInterval("levee()",1000);
+        
        
     
 //*******************************************************************
@@ -150,16 +159,19 @@
             i=0;}
             mybruitphoto.stop();
             }
-        function defiltext() {if (entree==0){entree=1; setInterval("voix()",3000);}}
-        function voix() {
-                 if (j==0){document.getElementById("newh1").textContent ="HELLO, WELCOME TO MY PORTFOLIO !"; j++; }
-            else if (j==1){document.getElementById("newh1").textContent ="Je suis Developpeur Web/Web Mobile"; j++; }
-            else if (j==6){document.getElementById("newh1").textContent ="Je recherche un stage en entreprise"; j=7; }
-            else if (j==7){document.getElementById("newh1").textContent ="date du stage:19/04/2021 au 11/06/2021"; j=0; }
-            else if (j==3){document.getElementById("newh1").textContent ="Mes différents langages et frameworks"; j++; }
-            else if (j==4){document.getElementById("newh1").textContent ="HTML-JS-JAVA/JAVA JEE-SQL-PL/SQL"; j++; }
-            else if (j==5){document.getElementById("newh1").textContent ="Symphony-PHP et BOOTSTRAP"; j++; }
-            else if (j==2){document.getElementById("newh1").textContent ="Je suis en formation (ENI Ecole Informatique)"; j++;}
+        function defiltext() {if (entree==0){monclavier.play(); 
+            entree=1;  
+            setInterval("voix()",200); }}
+        function voix() { chaine3=""; 
+            if (j+31<(chainette.length)) {indice=31;} else {indice=((chainette.length)-j); }
+            for(hj=indice;hj<31;hj++){chaine3=chaine3+" ";}
+            //document.getElementById("newh1").innerHTML =""; 
+
+                 document.getElementById("newh1").innerHTML ="    "+chainette.slice(j, j+indice)+mwrt+chaine3; 
+                if  (mwrt=="_") {mwrt=" ";} else {mwrt="_";}
+                 j++; 
+                 if (j==145 && first==0) {first=1; monclavier.play();}
+            if (j+60>=((chainette.length-1))) {j=0; }
         }
         //*****************************************
          function musicambiance(){  mymusic.play(); mymusic.stop(); }
