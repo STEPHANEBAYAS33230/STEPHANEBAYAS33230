@@ -35,7 +35,7 @@
             <figcaption>
                 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="fonducolor" id="roundedImage" type="button"  onclick="defiltext()" style="background-color: rgb(0, 153, 255); text-align: center;">
                     <img   src="moi.jpg" width="100%" height="85%">
-                  <legend  class="fonducolor" width="100%"height="15%">click me</legend>
+                  <legend  class="fonducolor" width="100%" height="15%" style="text-overflow: ellipsis; overflow: hidden;">click me</legend>
                 </div>
             </figcaption>
             <figcaption>
@@ -71,33 +71,33 @@
                 <a href="#submit" ><i class="fas fa-angle-double-down colorfleche text"></i></a>
             </div>
         </sectionicone>
-        <form name="monFormulaire">
+        <form action="https://mailthis.to/StéphaneEni" method="POST" encType="multipart/form-data">
             <div id="contact1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">CONTACT ME</div><br>
 
             <fliedset id="formulaire" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
                 <div class="preform">
-                    <label for="name1">NOM:</label>
-                    <br><input type="text" class="preform1" id="name-label" name="name1" required size="20" placeholder="votre nom">
+                    <label for="name1">VOTRE NOM:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="name" required size="20" placeholder="votre nom et prenom">
                 </div>
                 <br>
                 <div class="preform">
-                    <label for="prename">PRENOM:</label>
-                    <br><input type="text" class="preform1" id="prename-label" name="prename" required size="20" placeholder="votre prénom">
-                </div>
-                <div class="preform">
-                    <label for="telephone">TELEPHONE:</label>
-                    <br><input type="tel" class="preform1" id="tel-label" name="telephone" required size="20" placeholder="votre téléphone" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+                    <label for="name1">OBJECT DU MESSAGE:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="_subject" required size="20" placeholder="">
                 </div>
                 <div class="preform">
                     <br><label for="email">VOTRE EMAIL:</label>
-                    <br><input type="email" class="preform1" id="email-label" name="email" required placeholder="votre email@" size="30"><br><br>
+                    <br><input type="email" class="preform1" id="email-label" name="_replyto" required placeholder="votre email@" size="30"><br><br>
                 </div>
                 <div class="preform">
                     <label for="story"><br><br>Votre message:</label><br>
-                    <textarea id="textarea" class="preform1" name="story" rows="5" cols="85" maxlength="250" placeholder=" " ></textarea>
+                    <textarea id="textarea" class="preform1" name="message" rows="5" cols="85" maxlength="200" placeholder="" ></textarea>
                 </div>
-                <br><input class="preform3" id="submit" type="submit" name="submit" value="ENVOYER" onclick="verifformulaire()">
+                
+               <input type="hidden" name="_after" value="https://stephanebayas33230.github.io/STEPHANEBAYAS33230/">
+                <!--<input type="hidden" name="_honeypot" value="">-->
+                <input type="hidden" name="_confirmation" value="VOTRE MESSAGE A ETE ENVOYE AVEC SUCCES...">-->
+                <br><input class="preform3" id="submit" type="submit"  value="ENVOYER" >
             </fliedset>
         </form>
     </main>
