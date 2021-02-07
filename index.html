@@ -49,13 +49,12 @@
         <section id="project-section">
             <h1 class="project-title">MY PROJECTS</h1>
             <p><br><br><br>-<a href="DESTINATIONPRODUIT.html" target="_bank">my projet 1 été 2020</a><i class="fas fa-tractor" style="font-size: 25px;"></i></p>
-            <p>--<a href="FORMULAIREENQUETE.html" target="_bank">my projet 2 07/2020</a><i class="fas fa-plane"></i></p>
-            <p>---<a href="PAGETECHvers2.html" target="_blank">my projet 3 07/2020</a><i class="fas fa-keyboard"></i></p>
-            <p>----<a href="tributepage.html" target="_blank">my projet 4 08/2020</a><i class="fas fa-film"></i></p>
-            <p>-----<a href="mediaplayer/mediaplayerSM.html" target="_blank">mon lecteur music<i class="fab fa-bootstrap"></i> </a><i class="fas fa-music"></i></p>
-            <p>------<a href="moncine/moncine.html" target="_blank">my projet 6 11/2020</a><i class="fas fa-tv"></i></p>
-            <p>------<a href="monrugby/monrugby.html" target="_blank">my projet 7 11/2020</a><i class="fas fa-tv"></i></p>
-            <p>------<a href="meteo.html" target="_blank">api météo 20/12/2020</a><i class="fas fa-tv"></i></p>
+            <p><a href="FORMULAIREENQUETE.html" target="_bank">my projet 2 07/2020</a><i class="fas fa-plane"></i></p>
+            <p><a href="PAGETECHvers2.html" target="_blank">my projet 3 07/2020</a><i class="fas fa-keyboard"></i></p>
+            <p><a href="tributepage.html" target="_blank">my projet 4 08/2020</a><i class="fas fa-film"></i></p>
+            <p><a href="mediaplayer/mediaplayerSM.html" target="_blank">mon lecteur music<i class="fab fa-bootstrap"></i> </a><i class="fas fa-music"></i></p>
+            <p><a href="moncine/moncine.html" target="_blank">my projet 6 11/2020</a><i class="fas fa-tv"></i></p>
+            <p><a href="meteo.html" target="_blank">api météo 20/12/2020</a><i class="fas fa-tv"></i></p>
         </section>
 
         <footer id="footering">
@@ -82,17 +81,36 @@
 
             <fliedset id="formulaire" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
-               
+                <div class="preform">
+                    <label for="name1">Votre nom:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="name" required size="30" placeholder="votre nom" required>
+                </div>
+                <br>
+                <div class="preform">
+                    <label for="name1">Votre prenom:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="prename" required size="30" placeholder="votre prenom" required>
+                </div>
+                <br>
+                <div class="preform">
+                    <label for="name1">Objet:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="objet"  size="30" placeholder="objet de votre message">
+                </div>
+                <br>
+                <div class="preform">
+                    <label for="name1">Nom de l'entreprise:</label>
+                    <br><input type="text" class="preform1" id="name-label" name="societe" required size="30" placeholder="nom de l'entreprise">
+                </div>
+                <br>
                
                 <div class="preform">
-                    <br><label for="email">VOTRE EMAIL:</label>
+                    <br><label for="email">Votre email:</label>
                     <br><input type="email" class="preform1" id="email-label" name="_replyto" required placeholder="votre email@" size="30"><br><br>
                 </div>
                 <div class="preform">
                     <label for="story"><br><br>Votre message:</label><br>
-                    <textarea id="textarea" class="preform1" name="message" rows="5" cols="85" maxlength="200" placeholder="" ></textarea>
+                    <textarea id="textarea" class="preform1" name="message" rows="5" cols="85" maxlength="200" placeholder="" required></textarea>
                 </div>
-                <!--<input type="hidden" name="_to" value="lila74500@hotmail.fr" />-->
+                
                
                 <br><input class="preform3" id="submit" type="submit"  value="ENVOYER" >
             </fliedset>
