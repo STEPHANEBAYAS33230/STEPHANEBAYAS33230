@@ -1,7 +1,4 @@
-/* 
-   fait attention à la lisibilité
-   pas bordelique :D
-*/
+
 
 * {
     margin: 0;
@@ -9,11 +6,9 @@
 }
 
 /* 
-
 Pas de font size color familly dans les section header nav mais
 dans les h1 p etc parce que si non tous les elements d'une section 
 vont prendre les mêmes attributes.
-
 */
 #newh1 {width: 390px;
     padding-left: 10px;
@@ -44,6 +39,19 @@ header {
     border-color: rgb(168, 138, 138);
     font-family: 'Monoton', 'Arial Narrow', Arial, sans-serif;
     z-index: 2;
+}
+.nav-links:hover li a{
+	transform: scale(1.2);
+	opacity: .5;
+	filter: blur(5px);
+	height:100%;
+}
+
+.nav-links li a:hover{
+	transform: scale(1.4);
+	opacity: 1;
+	filter: blur(0);
+    font-size: 23px;
 }
 
 /* Ici les styles typography */
@@ -250,19 +258,24 @@ sectionicone {
 .colorfleche{
     color:slategrey;
 }
+.ecarlink{
+    text-align: center;
+    margin-top: 50px;
+}
 #mygithub {
-    margin: 100px 45px 100px 45px;
+    text-align: center;
+    font-size: 25px;
 
 }
 
 #mylinkedin {
-    margin: 100px 45px 100px 45px;
-
+    text-align: center;
+    font-size: 25px;
 }
 
 #mymail {
-    margin: 100px 45px 100px 45px;
-
+   
+    font-size: 25px;
 }
 
 
@@ -325,7 +338,7 @@ flex-direction row ou column par à port de tes besoin
 @media (min-width: 0px) and (max-width: 700px) {
 
     #main {
-        width: 350px;
+        width: 100%;
     }
 
     footer p {
@@ -348,12 +361,12 @@ flex-direction row ou column par à port de tes besoin
         width: 100%;
     }
 
-    h1 {
-        font-size: 1px;
+    h1 {visibility: hidden;
+        font-size: 10px;
     }
 
     ul li {
-        font-size: 20px;
+        font-size: 10px;
     }
 
 
