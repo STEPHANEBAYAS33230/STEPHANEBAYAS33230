@@ -18,7 +18,7 @@
 <body >
     <header>
         <nav id="nav-bar">
-            <ul class="nav-list">
+            <ul class="nav-list nav-links">
                 <h1 >Stéphane Développeur Web</h1>
                 <li><a href="#debut" class="lumineux">-Home-</a></li>
                 <li><a href="#project-section" class="lumineux">-Projects-</a></li>
@@ -55,15 +55,20 @@
             <p>-----<a href="mediaplayer/mediaplayerSM.html" target="_blank">mon lecteur music<i class="fab fa-bootstrap"></i> </a><i class="fas fa-music"></i></p>
             <p>------<a href="moncine/moncine.html" target="_blank">my projet 6 11/2020</a><i class="fas fa-tv"></i></p>
             <p>------<a href="monrugby/monrugby.html" target="_blank">my projet 7 11/2020</a><i class="fas fa-tv"></i></p>
-            <p>-------<a href="meteo.html" target="_blank">api meteo 20/12/2020</a><i class="fas fa-cloud"></i></p>
-
+            <p>------<a href="meteo.html" target="_blank">api météo 20/12/2020</a><i class="fas fa-tv"></i></p>
         </section>
 
         <footer id="footering">
             <div id="profile-link">
-                <a href="https://github.com/STEPHANEBAYAS33230" target="_blank" id="mygithub">my github <i class="fab fa-github-square turn" style="color:rgb(2, 59, 17);"></i></a>
-                <a href="https://www.linkedin.com/in/stephane-mounier-a0184b1a6" id="mylinkedin" target="_bank">my Linked In <i class="fab fa-linkedin turn" style="color:darkblue;"></i></a>
+                <div class="ecarlink">
+                <a href="https://github.com/STEPHANEBAYAS33230" target="_blank" id="mygithub">my github <i class="fab fa-github-square turn" style="color:rgb(2, 59, 17);"></i></a><br>
+                </div>
+                <div class="ecarlink">
+                <a href="https://www.linkedin.com/in/stephane-mounier-a0184b1a6" id="mylinkedin" target="_bank">my Linked In <i class="fab fa-linkedin turn" style="color:darkblue;"></i></a><br>
+                </div>
+                <div class="ecarlink">
                 <a href="mailto: lila74500@hotmail.fr" id="mymail" target="_blank">my mail <i class="fas fa-envelope-square turn"></i></a>
+                </div>    
             </div>
         </footer>
         <sectionicone>
@@ -71,7 +76,8 @@
                 <a href="#submit" ><i class="fas fa-angle-double-down colorfleche text"></i></a>
             </div>
         </sectionicone>
-        <form action="https://mailthis.to/StéphaneEni" method="POST" encType="multipart/form-data">
+        
+        <form action="http://formspree.io/lila74500@hotmail.fr" method="POST" encType="multipart/form-data">
             <div id="contact1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">CONTACT ME</div><br>
 
             <fliedset id="formulaire" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
@@ -83,20 +89,18 @@
                 <br>
                 <div class="preform">
                     <label for="name1">OBJECT DU MESSAGE:</label>
-                    <br><input type="text" class="preform1" id="name-label" name="_subject" required size="20" placeholder="">
+                    <br><input type="text" class="preform1" id="name-label" name="subject" required size="20" placeholder="">
                 </div>
                 <div class="preform">
                     <br><label for="email">VOTRE EMAIL:</label>
-                    <br><input type="email" class="preform1" id="email-label" name="_replyto" required placeholder="votre email@" size="30"><br><br>
+                    <br><input type="email" class="preform1" id="email-label" name="replyto" required placeholder="votre email@" size="30"><br><br>
                 </div>
                 <div class="preform">
                     <label for="story"><br><br>Votre message:</label><br>
                     <textarea id="textarea" class="preform1" name="message" rows="5" cols="85" maxlength="200" placeholder="" ></textarea>
                 </div>
-                
-               <input type="hidden" name="_after" value="https://stephanebayas33230.github.io/STEPHANEBAYAS33230/">
-                <!--<input type="hidden" name="_honeypot" value="">-->
-                <input type="hidden" name="_confirmation" value="VOTRE MESSAGE A ETE ENVOYE AVEC SUCCES...">
+                <input type="hidden" name="_to" value="lila74500@hotmail.fr" />
+               
                 <br><input class="preform3" id="submit" type="submit"  value="ENVOYER" >
             </fliedset>
         </form>
@@ -192,3 +196,5 @@
 </body>
 
 </html>
+
+
