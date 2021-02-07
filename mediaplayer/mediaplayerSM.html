@@ -27,10 +27,15 @@
         <div class="row">
             <!--barre de lecture audio-->
             <div class="col-lg-4 justify-content-center source">
+                <div>
                 <button type="button" class="btn btn-secondary btn-lg ecar" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
-
+                </div>
+                <div>    
                 <button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
+                </div>
+                <div>
                 <div class="progress1"><input id="rangeVolume" name="volume" type="range" value="100" min="0" max="100" step="10" onclick="ajourvolume()"></div>
+                </div>
             </div>
             <!--barre lecture morceau /artiste-->
             <div class="col-lg-4 lecteur">
@@ -70,9 +75,9 @@
         <div class="row">
             <div class="col-lg-2 justify-content-center musicVideoPodcast-box">
                 <ul class="list-group musicVideoPodcast">
-                    <li class="list-group-item">Music</li>
-                    <li class="list-group-item">Video</li>
-                    <li class="list-group-item">Sport</li>
+                    <li class="list-group-item"><a href="mediaplayerSM.html" target="_blank">Music</a></li>
+                    <li class="list-group-item" ><a href="https://www.netflix.com/fr/browse/genre/839338" target="_blank">Video</a></li>
+                    <li class="list-group-item" ><a href="https://www.lequipe.fr/" target="_blank">Sport</a></li>
                 </ul>
                 <div id="titreplaylist">My PlayList</div>
 
@@ -93,7 +98,7 @@
             </div>
 
             <!--PARTIE MORCEAU AVEC NOM ET TITRE DE L ARTISTE-->
-            <div class="col-lg-10 justify-content-center titreArtiste">
+            <div class="col-lg-10 justify-content-around titreArtiste">
                 <div class="row" id="addition">
                 
 
