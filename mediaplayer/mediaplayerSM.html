@@ -28,13 +28,13 @@
             <!--barre de lecture audio-->
             <div class="col-lg-4 justify-content-center source">
                 <div>
-                <button type="button" class="btn btn-secondary btn-lg ecar" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
-                </div>
-                <div>    
-                <button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
+                    <button type="button" class="btn btn-secondary btn-lg ecar" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
                 </div>
                 <div>
-                <div class="progress1"><input id="rangeVolume" name="volume" type="range" value="100" min="0" max="100" step="10" onclick="ajourvolume()"></div>
+                    <button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
+                </div>
+                <div>
+                    <div class="progress1"><input id="rangeVolume" name="volume" type="range" value="100" min="0" max="100" step="10" onclick="ajourvolume()"></div>
                 </div>
             </div>
             <!--barre lecture morceau /artiste-->
@@ -76,8 +76,8 @@
             <div class="col-lg-2 justify-content-center musicVideoPodcast-box">
                 <ul class="list-group musicVideoPodcast">
                     <li class="list-group-item"><a href="mediaplayerSM.html">Music</a></li>
-                    <li class="list-group-item" ><a href="../moncine/moncine.html" target="_blank">Video</a></li>
-                    <li class="list-group-item" ><a href="../monrugby/monrugby.html" target="_blank">Sport</a></li>
+                    <li class="list-group-item"><a href="../moncine/moncine.html" target="_blank">Video</a></li>
+                    <li class="list-group-item"><a href="../monrugby/monrugby.html" target="_blank">Sport</a></li>
                 </ul>
                 <div id="titreplaylist">My PlayList</div>
 
@@ -100,7 +100,7 @@
             <!--PARTIE MORCEAU AVEC NOM ET TITRE DE L ARTISTE-->
             <div class="col-lg-10 justify-content-around titreArtiste">
                 <div class="row" id="addition">
-                
+
 
                 </div>
             </div>
@@ -125,53 +125,54 @@
         var result;
         var playliststock;
         var postiret;
-var tablo=['beautiful trauma-pink','chunky-bruno mars','bob marley-dadju','la même-maitre gims','AC DC - Greatest hits','Bob Marley & the Wailers -Concert','Tino Rossi - Petit Papa Noël','VITAA SLIMANE - Je te le donne ','Coldplay - A Sky Full Of Stars','Coldplay - Something Just Like This','VITAA & SLIMANE - Avant toi','VITAA & SLIMANE - Ça ira']//,'Dire Straits - Money For Nothing','Mariah Carey - Christmas Is You','Charles Aznavour - La Boheme','Pink Floyd - Hey You ']//,'teen s titant go-The Night Begins to Shine','u2-Sunday Bloody Sunday','Edith Piaf - La Vie En Rose','edith piaf-La foule','Julien Doré - Le lac','Laspalès&chevalier-Ma femme est penible','Licence IV - Viens boire un p tit','Suprême NTM - La fièvre','Christine and the Queens - Damn, dis-moi ','Michel delpech-Quand j étais chanteur','Ed Sheeran - Afterglow','Luciano Pavarotti - Ave Maria','Pavarotti&Brown - It s A Man s World','Alicia Keys - Fallin','Beyoncé- Shatta Wale','BTS- Savage Love Remix'];
-var chaineaddition;
+        var tablo = ['beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira'] //,'Dire Straits - Money For Nothing','Mariah Carey - Christmas Is You','Charles Aznavour - La Boheme','Pink Floyd - Hey You ']//,'teen s titant go-The Night Begins to Shine','u2-Sunday Bloody Sunday','Edith Piaf - La Vie En Rose','edith piaf-La foule','Julien Doré - Le lac','Laspalès&chevalier-Ma femme est penible','Licence IV - Viens boire un p tit','Suprême NTM - La fièvre','Christine and the Queens - Damn, dis-moi ','Michel delpech-Quand j étais chanteur','Ed Sheeran - Afterglow','Luciano Pavarotti - Ave Maria','Pavarotti&Brown - It s A Man s World','Alicia Keys - Fallin','Beyoncé- Shatta Wale','BTS- Savage Love Remix'];
+        var chaineaddition;
 
-formation();
-scradd(0);
-affichagelisting();
-sonplus();
+        formation();
+        scradd(0);
+        affichagelisting();
+        sonplus();
 
-reorganisationplaylist();
-affichagelisting();
-setInterval("courant()", 500);
+        reorganisationplaylist();
+        affichagelisting();
+        setInterval("courant()", 500);
         // func formation titre/chanteur
-    //    <div class="cadrep" onclick="scr4()">
-    //                    <img class="fit-picture" src="media/175/4.jpg" alt="photo pochette cd taille grand">
-    //                    <div class="titreArtiste">LA MEME</div>
-    //                    <div class="NomArtiste">MAITRE GIMS</div>
-    //              </div>
-    function formation() {
-chaineaddition=""; var chainetraitee;
-        for (r=0;r<(tablo.length);r++) {
-        chaineaddition=chaineaddition+'<div class="cadrep" onclick="scradd('+(r.toString())+')">';
-        chaineaddition=chaineaddition+'<img class="fit-picture" src="media/175/'+tablo[r]+'.jpg" alt="photo pochette cd taille grand">';
-        postiret=tablo[r].indexOf('-');
-        chainetraitee=tablo[r].slice(postiret+1).toUpperCase();
-        chaineaddition=chaineaddition+'<div class="titreArtiste">'+(tablo[r].substring(0,postiret).toUpperCase())+'</div>';
-        chaineaddition=chaineaddition+'<div class="NomArtiste">'+(chainetraitee)+'</div>'+'</div>';
-        }
-       
-        document.getElementById("addition").innerHTML=chaineaddition;
+        //    <div class="cadrep" onclick="scr4()">
+        //                    <img class="fit-picture" src="media/175/4.jpg" alt="photo pochette cd taille grand">
+        //                    <div class="titreArtiste">LA MEME</div>
+        //                    <div class="NomArtiste">MAITRE GIMS</div>
+        //              </div>
+        function formation() {
+            chaineaddition = "";
+            var chainetraitee;
+            for (r = 0; r < (tablo.length); r++) {
+                chaineaddition = chaineaddition + '<div class="cadrep" onclick="scradd(' + (r.toString()) + ')">';
+                chaineaddition = chaineaddition + '<img class="fit-picture" src="media/175/' + tablo[r] + '.jpg" alt="photo pochette cd taille grand">';
+                postiret = tablo[r].indexOf('-');
+                chainetraitee = tablo[r].slice(postiret + 1).toUpperCase();
+                chaineaddition = chaineaddition + '<div class="titreArtiste">' + (tablo[r].substring(0, postiret).toUpperCase()) + '</div>';
+                chaineaddition = chaineaddition + '<div class="NomArtiste">' + (chainetraitee) + '</div>' + '</div>';
+            }
 
-    }
+            document.getElementById("addition").innerHTML = chaineaddition;
+
+        }
         // func scradd
         function scradd(ii) {
             finaddlist();
 
-            mymusic.src = tablo[ii]+".mp3";
-           
+            mymusic.src = tablo[ii] + ".mp3";
+
             source = "";
-            source = tablo[ii]+".mp3";
+            source = tablo[ii] + ".mp3";
             titrecchanteur();
         }
 
 
         function addplay() {
             for (i = 0; i < 10; i++) {
-                
-                if (localStorage.getItem("playlisting" + i.toString())=== null || localStorage.getItem("playlisting" + i.toString())===undefined || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY*******" || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY***") {
+
+                if (localStorage.getItem("playlisting" + i.toString()) === null || localStorage.getItem("playlisting" + i.toString()) === undefined || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY*******" || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY***") {
                     localStorage.setItem("playlisting" + i.toString(), source);
 
                     affichagelisting();
@@ -181,15 +182,15 @@ chaineaddition=""; var chainetraitee;
                     // alert(localStorage.getItem("playlisting" +(0).toString())); 
                     break;
                 }
-                
+
             }
 
             affichagelisting();
             //controle si playlist pleine
             playliststock = 0;
             for (w = 0; w < 10; w++) {
-                if ((localStorage.getItem("playlisting" + w.toString())) !=null && (localStorage.getItem("playlisting" + w.toString())) !=undefined && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY***") {
-                    playliststock++; 
+                if ((localStorage.getItem("playlisting" + w.toString())) != null && (localStorage.getItem("playlisting" + w.toString())) != undefined && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY***") {
+                    playliststock++;
                 }
             }
             if (playliststock > 9) {
@@ -201,7 +202,7 @@ chaineaddition=""; var chainetraitee;
             f = 0;
             entreeplaylist = 1;
             affichagelisting();
-             reorganisationplaylist();
+            reorganisationplaylist();
             affichagelisting();
             playlist2();
         }
@@ -234,20 +235,20 @@ chaineaddition=""; var chainetraitee;
 
         function affichagelisting() {
             for (z = 0; z < 10; z++) {
-                if (localStorage.getItem("playlisting" + z.toString()) !==null && localStorage.getItem("playlisting" + z.toString()) !== undefined && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY***") {
+                if (localStorage.getItem("playlisting" + z.toString()) !== null && localStorage.getItem("playlisting" + z.toString()) !== undefined && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY***") {
                     document.getElementById("titre" + z.toString()).textContent = localStorage.getItem("playlisting" + z.toString()).substring(0, localStorage.getItem("playlisting" + z.toString()).length - 4).toUpperCase();
                 } else {
                     document.getElementById("titre" + z.toString()).textContent = "***EMPTY*******"
-                    localStorage.setItem("playlisting" +(z.toString()), "***EMPTY*******");
+                    localStorage.setItem("playlisting" + (z.toString()), "***EMPTY*******");
                 }
             }
-        
+
         }
 
         function reorganisationplaylist() {
             for (gh = 0; gh < 11; gh++) {
                 for (w = 0; w < 9; w++) {
-                    if (localStorage.getItem("playlisting" + w.toString())=== null || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY*******" || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY***" || localStorage.getItem("playlisting" + w.toString())=== undefined) {
+                    if (localStorage.getItem("playlisting" + w.toString()) === null || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY*******" || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY***" || localStorage.getItem("playlisting" + w.toString()) === undefined) {
 
                         localStorage.setItem("playlisting" + w.toString(), localStorage.getItem("playlisting" + (w + 1).toString()));
                         document.getElementById("titre" + w.toString()).textContent = localStorage.getItem("playlisting" + (w + 1).toString())
@@ -292,6 +293,7 @@ chaineaddition=""; var chainetraitee;
 
 
         }
+
         function lecture() {
             mymusic.play();
             duree = mymusic.duration;
@@ -358,7 +360,7 @@ chaineaddition=""; var chainetraitee;
             temps = (parseInt(document.getElementById("rangeAvancement").value)) * duree / 100;
             if (temps - 5 > 0) {
                 mymusic.currentTime = temps - 5;
-               
+
             }
         }
 
