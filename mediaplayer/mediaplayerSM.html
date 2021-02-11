@@ -54,11 +54,11 @@
                         </div>
                         <!--end of col-->
                         <div class="col">
-                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Recherche">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Recherche" value="" oninput="selectionMusic(event)">
                         </div>
                         <!--end of col-->
                         <div class="col-auto">
-                            <button class="btn btn-lg btn-success" type="submit">Search</button>
+                            <button class="btn btn-lg btn-success" >Search</button>
                         </div>
                         <!--end of col-->
                     </div>
@@ -125,7 +125,10 @@
         var result;
         var playliststock;
         var postiret;
-        var tablo = ['beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira'] //,'Dire Straits - Money For Nothing','Mariah Carey - Christmas Is You','Charles Aznavour - La Boheme','Pink Floyd - Hey You ']//,'teen s titant go-The Night Begins to Shine','u2-Sunday Bloody Sunday','Edith Piaf - La Vie En Rose','edith piaf-La foule','Julien Doré - Le lac','Laspalès&chevalier-Ma femme est penible','Licence IV - Viens boire un p tit','Suprême NTM - La fièvre','Christine and the Queens - Damn, dis-moi ','Michel delpech-Quand j étais chanteur','Ed Sheeran - Afterglow','Luciano Pavarotti - Ave Maria','Pavarotti&Brown - It s A Man s World','Alicia Keys - Fallin','Beyoncé- Shatta Wale','BTS- Savage Love Remix'];
+        var valueInputRechercher="";
+        var tablo = ['beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira'];
+        var present=-1;
+
         var chaineaddition;
 
         formation();
@@ -142,16 +145,37 @@
         //                    <div class="titreArtiste">LA MEME</div>
         //                    <div class="NomArtiste">MAITRE GIMS</div>
         //              </div>
+        //*************fonction barre de recherche
+        function selectionMusic(event) {
+            valueInputRechercher=(event.target.value);
+            valueInputRechercher=valueInputRechercher.toUpperCase();
+            
+            formation();
+
+
+
+        }
+
+
+
         function formation() {
             chaineaddition = "";
             var chainetraitee;
+            if (valueInputRechercher=="") { valueInputRechercher="---";}
             for (r = 0; r < (tablo.length); r++) {
+                
+                present=((tablo[r].toString()).toUpperCase()).indexOf(valueInputRechercher);
+                
+                
+                if( valueInputRechercher=="---" || present>-1  ) {
                 chaineaddition = chaineaddition + '<div class="cadrep" onclick="scradd(' + (r.toString()) + ')">';
-                chaineaddition = chaineaddition + '<img class="fit-picture" src="media/175/' + tablo[r] + '.jpg" alt="photo pochette cd taille grand">';
+                chaineaddition = chaineaddition + '<img class="fit-picture" src="media/175/' + tablo[r] + '.jpg" alt="photo pochette cd">';
                 postiret = tablo[r].indexOf('-');
                 chainetraitee = tablo[r].slice(postiret + 1).toUpperCase();
                 chaineaddition = chaineaddition + '<div class="titreArtiste">' + (tablo[r].substring(0, postiret).toUpperCase()) + '</div>';
                 chaineaddition = chaineaddition + '<div class="NomArtiste">' + (chainetraitee) + '</div>' + '</div>';
+                }
+            
             }
 
             document.getElementById("addition").innerHTML = chaineaddition;
