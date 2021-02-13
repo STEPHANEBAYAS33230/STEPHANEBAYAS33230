@@ -20,33 +20,55 @@
 -->
 </head>
 
-<body>
+<body class="background">
+    
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     
     <!-- entete-->
-    <div class="container">
+    <div class="container" >
 
         <div class="row">
             <!--barre de lecture audio-->
-            <div class="col-lg-4 justify-content-center source">
-                <div>
-                    <button type="button" class="btn btn-secondary btn-lg ecar" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
+            <div class="col-lg-4 justify-content-center source ligneombre">
+                <div class="centertouche">
+                    <button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margedrt" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margegauch" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
                 </div>
-                <div>
-                    <button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
+                <div class="centertouche">
+                    <button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margedrt" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg ecar btn-grad4" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margegauch" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
                 </div>
                 <div>
                     <div class="progress1"><input id="rangeVolume" name="volume" type="range" value="100" min="0" max="100" step="10" onclick="ajourvolume()"></div>
                 </div>
             </div>
             <!--barre lecture morceau /artiste-->
-            <div class="col-lg-4 lecteur">
+            <div class="col-lg-4 lecteur ligneombre">
                 <h3 id="nomArtiste">Nom de l'Artiste</h3><br>
                 <h6 id="titreChanson">Titre de la chanson</h6>
                 <div><input id="rangeAvancement" type="range" value="0" min="0" max="100" name="avancement" step="1" onclick="ajourtemps()"></div>
-                <div id="addlist" onclick="addplay()">+Add play list<i class="fas fa-music"></i></div>
+                <div id="addlist" onclick="addplay()" class="btn-grad3">+Add play list<i class="fas fa-music"></i></div>
             </div>
 
             <!--BARRE SEARCH-->
-            <div class="col-lg-4 barresearch">
+            <div class="col-lg-4 barresearch ligneombre">
                 <form class="card card-lg ">
                     <div class="card-body row no-gutters align-items-center margesearch">
                         <div class="col-auto">
@@ -62,7 +84,10 @@
                         </div>
                         <!--end of col-->
                     </div>
+                   
                 </form>
+                <h1>LoveMusic</h1>
+                
             </div>
         </div>
 
@@ -75,23 +100,23 @@
         <div class="row">
             <div class="col-lg-2 justify-content-center musicVideoPodcast-box">
                 <ul class="list-group musicVideoPodcast">
-                    <li class="list-group-item"><a href="mediaplayerSM.html">Music</a></li>
-                    <li class="list-group-item"><a href="../moncine/moncine.html" target="_blank">Video</a></li>
-                    <li class="list-group-item"><a href="../monrugby/monrugby.html" target="_blank">Sport</a></li>
+                    <a href="mediaplayerSM.html"><li class="list-group-item cadrenoir">Music</li></a>
+                    <a href="../moncine/moncine.html" target="_blank"><li class="list-group-item cadrenoir">Video</li></a>
+                    <a href="../monrugby/monrugby.html" target="_blank"><li class="list-group-item cadrenoir">Sport</li></a>
                 </ul>
                 <div id="titreplaylist">My PlayList</div>
 
-                <div id="titre0" class="playliste" onclick="vider(0)">***EMPTY*******</div>
-                <div id="titre1" class="playliste" onclick="vider(1)">***EMPTY*******</div>
-                <div id="titre2" class="playliste" onclick="vider(2)">***EMPTY*******</div>
-                <div id="titre3" class="playliste" onclick="vider(3)">***EMPTY*******</div>
-                <div id="titre4" class="playliste" onclick="vider(4)">***EMPTY*******</div>
-                <div id="titre5" class="playliste" onclick="vider(5)">***EMPTY*******</div>
-                <div id="titre6" class="playliste" onclick="vider(6)">***EMPTY*******</div>
-                <div id="titre7" class="playliste" onclick="vider(7)">***EMPTY*******</div>
-                <div id="titre8" class="playliste" onclick="vider(8)">***EMPTY*******</div>
-                <div id="titre9" class="playliste" onclick="vider(9)">***EMPTY*******</div>
-                <div id="play2" class="playliste2" onclick="demarreplaylist()">play list<i class="far fa-play-circle"></i></div>
+                <div id="titre0" class="playliste btn-grad" onclick="vider(0)">***EMPTY*******</div>
+                <div id="titre1" class="playliste btn-grad" onclick="vider(1)">***EMPTY*******</div>
+                <div id="titre2" class="playliste btn-grad" onclick="vider(2)">***EMPTY*******</div>
+                <div id="titre3" class="playliste btn-grad" onclick="vider(3)">***EMPTY*******</div>
+                <div id="titre4" class="playliste btn-grad" onclick="vider(4)">***EMPTY*******</div>
+                <div id="titre5" class="playliste btn-grad" onclick="vider(5)">***EMPTY*******</div>
+                <div id="titre6" class="playliste btn-grad" onclick="vider(6)">***EMPTY*******</div>
+                <div id="titre7" class="playliste btn-grad" onclick="vider(7)">***EMPTY*******</div>
+                <div id="titre8" class="playliste btn-grad" onclick="vider(8)">***EMPTY*******</div>
+                <div id="titre9" class="playliste btn-grad" onclick="vider(9)">***EMPTY*******</div>
+                <div id="play2" class="playliste2 btn-grad2" onclick="demarreplaylist()">play list<i class="far fa-play-circle"></i></div>
                 <!-- <div id="next2" class="playliste2">next<i class="fas fa-fast-forward"></i></div>
                 <div id="prenext2" class="playliste2"><i class="fas fa-fast-backward"></i>before</div>-->
 
@@ -107,288 +132,7 @@
             <!--fin du main*************-->
         </div>
     </div>
-    <script>
-        var mymusic = document.createElement("audio");
-        var monvolume = 10;
-        var srce1 = "beautiful trauma-pink.mp3";
-        var srce2 = "chunky-bruno mars.mp3";
-        var srce3 = "bob marley-dadju.mp3";
-        var srce4 = "la même-maitre gims.mp3";
-        var entreeplaylist = 0;
-        var duree;
-        var sortie;
-        var temps;
-        var f = 0;
-        var titre;
-        var chanteur;
-        var source;
-        var result;
-        var playliststock;
-        var postiret;
-        var valueInputRechercher="";
-        var tablo = ['beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira','beautiful trauma-pink', 'chunky-bruno mars', 'bob marley-dadju', 'la même-maitre gims', 'AC DC - Greatest hits', 'Bob Marley & the Wailers -Concert', 'Tino Rossi - Petit Papa Noël', 'VITAA SLIMANE - Je te le donne ', 'Coldplay - A Sky Full Of Stars', 'Coldplay - Something Just Like This', 'VITAA & SLIMANE - Avant toi', 'VITAA & SLIMANE - Ça ira'];
-        var present=-1;
-
-        var chaineaddition;
-
-        formation();
-        scradd(0);
-        affichagelisting();
-        sonplus();
-
-        reorganisationplaylist();
-        affichagelisting();
-        setInterval("courant()", 500);
-        // func formation titre/chanteur
-        //    <div class="cadrep" onclick="scr4()">
-        //                    <img class="fit-picture" src="media/175/4.jpg" alt="photo pochette cd taille grand">
-        //                    <div class="titreArtiste">LA MEME</div>
-        //                    <div class="NomArtiste">MAITRE GIMS</div>
-        //              </div>
-        //*************fonction barre de recherche
-        function selectionMusic(event) {
-            valueInputRechercher=(event.target.value);
-            valueInputRechercher=valueInputRechercher.toUpperCase();
-            
-            formation();
-
-
-
-        }
-
-
-
-        function formation() {
-            chaineaddition = "";
-            var chainetraitee;
-            if (valueInputRechercher=="") { valueInputRechercher="---";}
-            for (r = 0; r < (tablo.length); r++) {
-                
-                present=((tablo[r].toString()).toUpperCase()).indexOf(valueInputRechercher);
-                
-                
-                if( valueInputRechercher=="---" || present>-1  ) {
-                chaineaddition = chaineaddition + '<div class="cadrep" onclick="scradd(' + (r.toString()) + ')">';
-                chaineaddition = chaineaddition + '<img class="fit-picture" src="media/175/' + tablo[r] + '.jpg" alt="photo pochette cd">';
-                postiret = tablo[r].indexOf('-');
-                chainetraitee = tablo[r].slice(postiret + 1).toUpperCase();
-                chaineaddition = chaineaddition + '<div class="titreArtiste">' + (tablo[r].substring(0, postiret).toUpperCase()) + '</div>';
-                chaineaddition = chaineaddition + '<div class="NomArtiste">' + (chainetraitee) + '</div>' + '</div>';
-                }
-            
-            }
-
-            document.getElementById("addition").innerHTML = chaineaddition;
-
-        }
-        // func scradd
-        function scradd(ii) {
-            finaddlist();
-
-            mymusic.src = tablo[ii] + ".mp3";
-
-            source = "";
-            source = tablo[ii] + ".mp3";
-            titrecchanteur();
-        }
-
-
-        function addplay() {
-            for (i = 0; i < 10; i++) {
-
-                if (localStorage.getItem("playlisting" + i.toString()) === null || localStorage.getItem("playlisting" + i.toString()) === undefined || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY*******" || localStorage.getItem("playlisting" + i.toString()) == "***EMPTY***") {
-                    localStorage.setItem("playlisting" + i.toString(), source);
-
-                    affichagelisting();
-                    // alert(localStorage.getItem("playlisting" + i.toString())+"---"+source); 
-                    i = 10;
-
-                    // alert(localStorage.getItem("playlisting" +(0).toString())); 
-                    break;
-                }
-
-            }
-
-            affichagelisting();
-            //controle si playlist pleine
-            playliststock = 0;
-            for (w = 0; w < 10; w++) {
-                if ((localStorage.getItem("playlisting" + w.toString())) != null && (localStorage.getItem("playlisting" + w.toString())) != undefined && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + w.toString()) != "***EMPTY***") {
-                    playliststock++;
-                }
-            }
-            if (playliststock > 9) {
-                alert("La playList est pleine " + playliststock);
-            }
-        }
-
-        function demarreplaylist() {
-            f = 0;
-            entreeplaylist = 1;
-            affichagelisting();
-            reorganisationplaylist();
-            affichagelisting();
-            playlist2();
-        }
-
-        function playlist2() {
-            if (localStorage.getItem("playlisting" + f.toString()) !== undefined || localStorage.getItem("playlisting" + f.toString()) !== null || localStorage.getItem("playlisting" + f.toString()) != "***EMPTY*******" && entreeplaylist == 1) {
-
-                mymusic.src = localStorage.getItem("playlisting" + f.toString());
-                source = "";
-                source = localStorage.getItem("playlisting" + f.toString());
-
-                sonplus();
-                titrecchanteur();
-                lecture();
-                setInterval("courant()", 500);
-
-            }
-            f++;
-        }
-
-
-
-
-        function vider(x) {
-            localStorage.setItem("playlisting" + x.toString(), "***EMPTY*******");
-            affichagelisting();
-            reorganisationplaylist();
-            affichagelisting();
-        }
-
-        function affichagelisting() {
-            for (z = 0; z < 10; z++) {
-                if (localStorage.getItem("playlisting" + z.toString()) !== null && localStorage.getItem("playlisting" + z.toString()) !== undefined && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY*******" && localStorage.getItem("playlisting" + z.toString()) != "***EMPTY***") {
-                    document.getElementById("titre" + z.toString()).textContent = localStorage.getItem("playlisting" + z.toString()).substring(0, localStorage.getItem("playlisting" + z.toString()).length - 4).toUpperCase();
-                } else {
-                    document.getElementById("titre" + z.toString()).textContent = "***EMPTY*******"
-                    localStorage.setItem("playlisting" + (z.toString()), "***EMPTY*******");
-                }
-            }
-
-        }
-
-        function reorganisationplaylist() {
-            for (gh = 0; gh < 11; gh++) {
-                for (w = 0; w < 9; w++) {
-                    if (localStorage.getItem("playlisting" + w.toString()) === null || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY*******" || localStorage.getItem("playlisting" + w.toString()) === "***EMPTY***" || localStorage.getItem("playlisting" + w.toString()) === undefined) {
-
-                        localStorage.setItem("playlisting" + w.toString(), localStorage.getItem("playlisting" + (w + 1).toString()));
-                        document.getElementById("titre" + w.toString()).textContent = localStorage.getItem("playlisting" + (w + 1).toString())
-                        localStorage.setItem("playlisting" + (w + 1).toString(), "***EMPTY*******");
-                        document.getElementById("titre" + (w + 1).toString()).textContent = "***EMPTY*******"
-                    }
-                }
-            }
-        }
-
-
-        function titrecchanteur() {
-            var phase = 0;
-            titre = "";
-            chanteur = "";
-            for (i = 0; i < source.length; i++) {
-                if (source[i] == "-") {
-                    phase = 1;
-                }
-                if (source[i] == ".") {
-                    phase = 2;
-                }
-
-                if (phase == 0) {
-                    titre = titre + source[i].toUpperCase();
-                }
-                if (phase == 1) {
-                    chanteur = chanteur + source[i].toUpperCase();
-                }
-                document.getElementById("nomArtiste").textContent = chanteur;
-                document.getElementById("titreChanson").textContent = titre;
-                sortie = 0;
-            }
-
-
-        }
-
-        function finaddlist() {
-            f = 0;
-            entreeplaylist = 0;
-            sortie = 0;
-
-
-        }
-
-        function lecture() {
-            mymusic.play();
-            duree = mymusic.duration;
-            sortie = 1;
-            document.getElementById("rangeAvancement").value = (Math.round(100 * (mymusic.currentTime) / duree)).toString();
-            setInterval("courant()", 500);
-        }
-
-        function courant() {
-            duree = mymusic.duration;
-            if (sortie == 1 || entreeplaylist == 1) {
-                document.getElementById("rangeAvancement").value = (Math.round(100 * (mymusic.currentTime) / duree)).toString();
-            }
-            if (entreeplaylist == 1 && (Math.round(100 * (mymusic.currentTime) / duree) > 99.9)) {
-                playlist2();
-            }
-        }
-
-        function pausee() {
-            mymusic.pause();
-        }
-
-        function stopit() {
-            mymusic.stop();
-        }
-
-        function sonplus() {
-            if (monvolume < 10) {
-                monvolume = monvolume + 1;
-                mymusic.volume = monvolume / 10;
-            }
-            document.getElementById("rangeVolume").value = (10 * monvolume).toString();
-        }
-
-        function sonmoins() {
-            if (monvolume > 0) {
-                monvolume = monvolume - 1;
-                mymusic.volume = monvolume / 10;
-            }
-            document.getElementById("rangeVolume").value = (10 * monvolume).toString();
-        }
-
-        function ajourvolume() {
-            monvolume = (parseInt(document.getElementById("rangeVolume").value)) / 10;
-            monvolume = monvolume - 1;
-            sonplus();
-
-        }
-
-        function ajourtemps() {
-            temps = (parseInt(document.getElementById("rangeAvancement").value)) * duree / 100;
-            mymusic.currentTime = temps;
-        }
-
-        function avancer() {
-            temps = (parseInt(document.getElementById("rangeAvancement").value)) * duree / 100;
-            if (temps + 20 < duree) {
-                mymusic.currentTime = temps + 20;
-
-            }
-        }
-
-        function reculer() {
-            temps = (parseInt(document.getElementById("rangeAvancement").value)) * duree / 100;
-            if (temps - 5 > 0) {
-                mymusic.currentTime = temps - 5;
-
-            }
-        }
-
-    </script>
+    <script src="mediaplayerSM.js"></script>
 </body>
 
 </html>
