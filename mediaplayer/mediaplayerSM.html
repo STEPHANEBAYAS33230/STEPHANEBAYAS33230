@@ -5,55 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Music by Stephane Mounier</title>
     <script src="https://kit.fontawesome.com/aa652281aa.js" crossorigin="anonymous"></script>
     <!-- ^^fontansome -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="mediaP.css">
-    <!-- 
-<link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">********mimifier
-<link href="dist/css/bootstrap.css" rel="stylesheet" type="text/css">********entiere pour developpement
-<link href="dist/css//bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-<script src="dist/js/bootstrap.min.js"></script>
--->
+
 </head>
 
 <body class="background">
-    
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-     
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
     <!-- entete-->
-    <div class="container" >
+    <div class="container">
 
         <div class="row">
             <!--barre de lecture audio-->
             <div class="col-lg-4 justify-content-center source ligneombre">
                 <div class="centertouche">
-                    <button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margedrt" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg ecar" onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margegauch" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
+                    <button type="button" class="btn btn-secondary btn-lg btn-grad4 margedrt" onclick="reculer()"><i class="fas fa-fast-backward"></i></button><button type="button" class="btn btn-secondary btn-lg " onclick="lecture();"><i class="fas fa-play"></i></button><button type="button" class="btn btn-secondary btn-lg  btn-grad4 margegauch" onclick="avancer();"><i class="fas fa-fast-forward"></i></button>
                 </div>
                 <div class="centertouche">
-                    <button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margedrt" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg ecar btn-grad4" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg ecar btn-grad4 margegauch" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
+                    <button type="button" class="btn btn-secondary btn-lg btn-grad4 margedrt" onclick="sonmoins();"><i class="far fa-file-audio"></i></button><button type="button" class="btn btn-secondary btn-lg  btn-grad4" onclick="pausee();"><i class="fas fa-pause"></i></button><button type="button" class="btn btn-secondary btn-lg btn-grad4 margegauch" onclick="sonplus();"><i class="fas fa-file-audio"></i></button>
                 </div>
                 <div>
                     <div class="progress1"><input id="rangeVolume" name="volume" type="range" value="100" min="0" max="100" step="10" onclick="ajourvolume()"></div>
@@ -80,14 +75,14 @@
                         </div>
                         <!--end of col-->
                         <div class="col-auto">
-                            <button class="btn btn-lg btn-success" >Search</button>
+                            <h4 class="boutonVert">Search</h4>
                         </div>
                         <!--end of col-->
                     </div>
-                   
+
                 </form>
                 <h1>LoveMusic</h1>
-                
+
             </div>
         </div>
 
@@ -100,9 +95,15 @@
         <div class="row">
             <div class="col-lg-2 justify-content-center musicVideoPodcast-box">
                 <ul class="list-group musicVideoPodcast">
-                    <a href="mediaplayerSM.html"><li class="list-group-item cadrenoir">Music</li></a>
-                    <a href="../moncine/moncine.html" target="_blank"><li class="list-group-item cadrenoir">Video</li></a>
-                    <a href="../monrugby/monrugby.html" target="_blank"><li class="list-group-item cadrenoir">Sport</li></a>
+                    <a href="mediaplayerSM.html">
+                        <li class="list-group-item cadrenoir">Music</li>
+                    </a>
+                    <a href="../moncine/moncine.html" target="_blank">
+                        <li class="list-group-item cadrenoir">Video</li>
+                    </a>
+                    <a href="../monrugby/monrugby.html" target="_blank">
+                        <li class="list-group-item cadrenoir">Sport</li>
+                    </a>
                 </ul>
                 <div id="titreplaylist">My PlayList</div>
 
@@ -123,8 +124,8 @@
             </div>
 
             <!--PARTIE MORCEAU AVEC NOM ET TITRE DE L ARTISTE-->
-            <div class="col-lg-10 justify-content-around titreArtiste">
-                <div class="row" id="addition">
+            <div class="col-lg-10 justify-content-center titreArtiste">
+                <div class="row justify-content-between" id="addition">
 
 
                 </div>
